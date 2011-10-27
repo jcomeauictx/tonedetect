@@ -83,6 +83,7 @@ Source: C:\Users\emb\Desktop\Work\toneDetect\MSRuntime\Microsoft.VC90.MFC\mfcm90
 Source: C:\Users\emb\Desktop\Work\toneDetect\MSRuntime\Microsoft.VC90.MFC\mfcm90u.dll; DestDir: {app}; Flags: onlyifdoesntexist; 
 Source: C:\Users\emb\Desktop\Work\toneDetect\MSRuntime\Microsoft.VC90.MFC\mfc90.dll; DestDir: {app}; Flags: onlyifdoesntexist; 
 Source: C:\Users\emb\Desktop\Work\toneDetect\MSRuntime\Microsoft.VC90.MFC\mfc90u.dll; DestDir: {app}; Flags: onlyifdoesntexist; 
+Source: C:\Users\emb\Desktop\Work\toneDetect\gpl.txt; DestDir: {app}; Flags: onlyifdoesntexist; 
 
 [Icons]
 Name: {group}\; Filename: {app}\toneDetect.exe; IconFilename: {app}\td.ico; IconIndex: 0; 
