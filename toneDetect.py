@@ -655,17 +655,24 @@ def mail( emailType, emailUser, emailPass, subject, mailList, text, attach):
 
     if sendMail == True:
         logger.debug("Begin SMTP connection")
-        server = smtplib.SMTP(smtp_server)
-        if emailType.upper() == "GMAIL":
-            server.ehlo()
-            server.starttls()
-            server.ehlo()
-            server.login(emailUser, emailPass)
-        server.debug = 1
-        server.sendmail(emailFrom, mailList, msg.as_string())
-        server.close()
-    logger.debug("SMTP connection closed")
-    logger.info("eMail sent %s to %s" % (subject, mailList))
+        try:
+            server = smtplib.SMTP(smtp_server)
+            if emailType.upper() == "GMAIL":
+                server.ehlo()
+                server.starttls()
+                server.ehlo()
+                server.login(emailUser, emailPass)
+            server.debug = 1
+            server.sendmail(emailFrom, mailList, msg.as_string())
+            server.close()
+        except smtplib.socket.error:
+            #server.close()
+            server = None
+    if server is None:
+        logger.info("eMail connection failed. No message sent")
+    else:
+        logger.debug("SMTP connection closed")
+        logger.info("eMail sent %s to %s" % (subject, mailList))
     logger.debug("Leaving mail")
     
 def go():
