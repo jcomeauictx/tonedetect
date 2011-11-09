@@ -5,7 +5,7 @@
 # $Author: emb $
 # String values should be quoted
 # Integers = int(10) Floats = float(0.1)
-# List's should be in () without quotes and seperated by commas bandPass = (250,30000)
+# List's should be in () without quotes and separated by commas bandPass = (250,30000)
 # The ini works by executing the command as written
 
 ########################################
@@ -19,7 +19,7 @@ debugLevel = "debug"
 deviceIndex = int(1)
 # This only works if you are using an isp's smtp server
 emailFrom = "dispatch-no-reply@xxxxxx.org"
-# Don't chamge this if you are using the windows version. The windows
+# Don't change this if you are using the windows version. The windows
 # version installs lame in  the toneDetect directory
 localLame = "lame.exe"
 sendMail = bool(True)
@@ -51,15 +51,16 @@ emailPass = ""
 # These numbers are a good place to start. I am working on some documentation
 # that will further explain them
 # Those that start with min or max are times in second, except minDBLevel
-bandPass = (250,3500)
-maxSilenceLength = int(2)
-minDbLevel = int(45)
+bandPass = (250,3500) # Frequency in Hz for the bandpass filter
+maxSilenceLength = int(2) 
+minDbLevel = int(45)  # Minimum level (in dB) required to sense audio
 minGroupTime = float(4.0)
 minToneLength = float(0.6)
 minVoiceLength = int(10)
 sampleRate = int(11025)
 maxRecordLength = int(180)
 # for best performance the buffersize should be a power of 2. Changing it
-# will affect the ability of toneDetect to recognize some of the shorter plectron tones.
+# will affect the ability of toneDetect to recognize some of the shorter 
+# plectron tones.
 bufferSize = int(1024)
 
