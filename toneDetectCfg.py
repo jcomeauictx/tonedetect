@@ -16,7 +16,7 @@
 # If you don't like large logs change debug to info
 debugLevel = "debug"
 # Make sure you set this to your sound card
-deviceIndex = int(1)
+deviceIndex = int(0)
 # This only works if you are using an isp's smtp server
 emailFrom = "dispatch-no-reply@xxxxxx.org"
 # Don't change this if you are using the windows version. The windows
@@ -57,10 +57,10 @@ minDbLevel = int(45)  # Minimum level (in dB) required to sense audio
 minGroupTime = float(4.0)
 minToneLength = float(0.6)
 minVoiceLength = int(10)
-sampleRate = int(11025)
+sampleRate = int(44100)
 maxRecordLength = int(180)
 # for best performance the buffersize should be a power of 2. Changing it
 # will affect the ability of toneDetect to recognize some of the shorter 
 # plectron tones.
-bufferSize = int(1024)
+bufferSize = int(262144)
 
